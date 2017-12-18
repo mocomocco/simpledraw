@@ -1,0 +1,15 @@
+import java. io.*;
+
+public class En112{
+    public static void main(String[] args){
+	try{
+	    InputStreamReader ireader = new InputStreamReader(System. in);
+	    BuffereddReader breader = new BufferedReader(ireader);
+	    System.out.print("input:");
+	    String line = breader.readline();
+	    Systemout.println("output"+line);
+	}catch(IOException){
+	    System.err.println(e);
+	}
+    }
+}

@@ -1,0 +1,15 @@
+import javax.swing.JFrame;
+public class SampleWindow extends JFrame {
+
+	public void initialize () {
+		this.setTitle("私が作った最初の窓");
+		this.setSize(200,100);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+	public static void main (String argv[]) {
+		SampleWindow sw = new SampleWindow();
+		sw.initialize();
+	}
+}

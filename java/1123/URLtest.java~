@@ -1,0 +1,22 @@
+import java.net.*;
+
+public class URLtest{
+    public static main(String[] args){
+	try{
+	    URL targetURL =new URL("http://www.ocha.ac.jp/");
+	    Inputstream istream = targetURL.openStream();
+	    InputStreamReader isreader = new InptStreamReader(istream);
+	    BufferedReader breader = new BufferedReader(isreader);
+
+	    String tmp=null;
+
+	    while((tmp=breader.readLine())!=null){
+		System.out.println(tmp);
+	    }
+	    breader.close();
+	}catch(IOEException e){
+	    System.out.println(e);
+	}
+    }
+
+}

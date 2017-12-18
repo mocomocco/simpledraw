@@ -1,0 +1,9 @@
+public class TestForEach{
+	public stativ void ain(String[] args){
+		
+		int[] array=new int[]{1,2,3,4};
+		for(int x : array){
+			System.out.println(x);
+			}
+			}
+			}

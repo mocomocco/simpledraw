@@ -1,0 +1,22 @@
+import java io.*;
+
+public class PrintWeiterTest{
+    public static void main (String[] args){
+
+	try{
+	    FileWriter fwriter = new FileWriter("writer.txt");
+	    PrintWriter pwriter = new PrintWriter(fwriter);
+
+	    int x=2016;
+	    String s="Java教科書";
+
+	    pwriter.println(x);
+	    pwriter.printn(s);
+
+	    pwriter.close();
+
+	}catch(IOEexception e){
+	    System.out.println(e);
+	}
+
+}

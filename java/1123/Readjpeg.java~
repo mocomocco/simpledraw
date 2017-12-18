@@ -1,0 +1,24 @@
+import java.net.*;
+import java.io.*;
+
+public class Readjpeg{
+    public static void main(String[] args){
+	try{
+	    URL targetURL =new URL(args[0]);
+	    InputStream istream = targetURL.openStream();
+	    InputStreamReader isreader = new InputStreamReader(istream);
+
+	    FileOutputStream fout =new FileOutputStream("cat.jpg");
+	    int i;
+
+	    while((i=isreader.read())!=-1){
+		fout.write(i);
+	    }
+	    isreader.close();
+	    fout.close();
+	}catch(IOException e){
+	    System.out.println(e);
+	}
+    }
+
+}

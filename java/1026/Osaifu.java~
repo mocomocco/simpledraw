@@ -1,0 +1,19 @@
+public class Osaifu{
+    int okane;
+
+    void in(int x){
+	okane+=x;
+    }
+
+    int out(int x){
+	if(okane>=x){
+	    okane-=x;
+	}
+	else{
+	    x=okane;
+	    okane=0;
+	} 
+	return x;
+    }
+
+}

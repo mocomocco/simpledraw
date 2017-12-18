@@ -1,0 +1,6 @@
+public class TestException{
+    public static void main(String Args[]){
+	System.out.println(argv[0]+" "+argv[1]);
+	System.out.println("Nice to meet you.");
+    }
+}

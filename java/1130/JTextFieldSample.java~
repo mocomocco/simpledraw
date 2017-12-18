@@ -1,0 +1,41 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class JTextFieldSample extends JFrame implements ActionListener{
+    JButton button;
+    JTextField textleft,textright;
+
+    JTextFieldSample(String title){
+	setTitle(title);
+
+	button=new JButton("left to right");
+	button.addActionListener(this);
+
+	textleft = new JTextField(10);
+	textright= new JTextField(10);
+	JPanel panel= new JPanel();
+
+	panel.setLayout(new BorderLayout());
+	panel.add(textleft,BorderLayout.WEST);
+	panel.add(textright,BorderLayout.EAST);
+	panel.add(button,BorderLayout.SOUTH);
+
+	Container container = getContentPane();
+	container.add(panel);
+    }
+
+    public void actionPerformed(ActionEvent e){
+	textright.setText(textleft.getText());
+	textleft.setText("");
+    }
+
+    public static void main(String[] args){
+	JTextFieldSample sample=new JTextFieldSample("JTextFieldSample");
+
+	sample.pack();
+	sample.setVisible(true);
+	sample.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+}
